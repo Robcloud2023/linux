@@ -5,3 +5,8 @@ THEIP=$(ip addr show | grep -E '(eth0|br0|vmbr0)' | grep metric | grep 'inet '| 
 PS1="\\033[01;31m\]▓\u@"$THEIP" \h \w ▓ \[\033[00m\]";
 
 alias ls='ls -la'
+
+HISTSIZE=5000
+HISTFILESIZE=10000
+HISTFILE="~/.bash_history"
+export HISTSIZE HISTFILESIZE HISTFILE
